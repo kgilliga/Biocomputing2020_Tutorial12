@@ -1,1 +1,15 @@
 #Exercise 10
+#Question 1:
+#Find some data on two variables that you would expect to be related to each other, and then save a text file
+#Write a script that loads this text file and produces a scatter plot of those two variables that includes a trend line.
+
+
+
+#Question 2:
+#Given the data in “data.txt”. Write a script that generates two figures that sumamrize the data. 
+#First, show a barplot of the means of the four populations. 
+#Second, show a scatter plot of all of the observations. 
+#You may want to “jitter” the points (geom_jitter()) to make it easier to see all of the observations within a population in your scatter plot.
+#Alternatively, you could also try setting the alpha argument in geom_scatterplot() to 0.1. 
+#Do the bar and scatter plots tell you different stories? Why?
+  
