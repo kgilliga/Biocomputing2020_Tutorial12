@@ -11,13 +11,31 @@ data = read.table("data.txt" , header=TRUE, sep=",", stringsAsFactors=FALSE)
 head(data)
 library(ggplot2)
 #First, show a barplot of the means of the four populations.
-ggplot(data, aes(x = region, y= observations)) +
+ggplot(data, aes(x = region,)) +
   geom_bar() +
   theme_bw() +
   xlab("Region") +
   theme(axis.text.x = element_text(angle=65, vjust=0.6))
-#Second, show a scatter plot of all of the observations. 
+#Second, show a scatter plot of all of the observations.
+ggplot(data = data, 
+       aes(x = region, y = observations )) +
+  geom_point() +
+  xlab("region") +
+  ylab("observations") +
+  theme_classic() +
+  theme(legend.title=element_blank())
 #You may want to “jitter” the points (geom_jitter()) to make it easier to see all of the observations within a population in your scatter plot.
+ggplot(data = data, 
+       aes(x = region, y = observations )) +
+  geom_point() +
+  xlab("region") +
+  ylab("observations") +
+  (geom_jitter()) +
+  theme_classic() +
+  theme(legend.title=element_blank())
+
 #Alternatively, you could also try setting the alpha argument in geom_scatterplot() to 0.1. 
 #Do the bar and scatter plots tell you different stories? Why?
+#Yes, the bar and scatter plots tell different stories, because the scatter plots 
+#demonstrate the full 
   
