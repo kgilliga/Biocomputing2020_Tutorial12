@@ -2,7 +2,17 @@
 setwd ("/Users/kearagilligan/Desktop/Biocomputing/Biocomputing2020_Tutorial12/")
 #Question 1:
 #Find some data on two variables that you would expect to be related to each other, and then save a text file
+###Data retrieved from https://digitalcommons.odu.edu/cgi/viewcontent.cgi?article=1292&context=ots_masters_projects
 #Write a script that loads this text file and produces a scatter plot of those two variables that includes a trend line.
+studying= read.table("studyData.txt", sep = ",", header = TRUE)
+library(ggplot2)
+ggplot(data = studying, 
+       aes(x = Minutes.of.Study, y = Final.Score)) + 
+  geom_point() +
+  xlab("Minutes of Study") + 
+  ylab("Final Score") +
+  stat_smooth(method="lm") +
+  theme_classic()
 
 
 #Question 2:
