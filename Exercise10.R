@@ -48,6 +48,7 @@ ggplot(data = data,
 #Do the bar and scatter plots tell you different stories? Why?
 ####Yes, the bar and scatter plots tell different stories, because the scatter plots 
 #demonstrate the full distribution of the data for each region, and show large variations in east and west, and more 
-#concentrated data for north and south, which is not seen in the bar graph that only shows the averages
+#concentrated data for north and south, which is not seen in the bar graph that only shows the averages. The averages would make 
+#it seem that the observations for each region are very similar, which is not actuallu the case.
 
   
