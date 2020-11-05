@@ -20,7 +20,9 @@ data = read.table("data.txt" , header=TRUE, sep=",", stringsAsFactors=FALSE)
 head(data)
 library(ggplot2)
 #First, show a barplot of the means of the four populations.
-ggplot(data, aes(x = region , y= mean(observations))) +
+ggplot(data, aes(x = region, y = observations)) +
+  stat_summary(fun.y = mean,
+               geom="bar")
   geom_bar() +
   theme_bw() +
   xlab("Region") +
